@@ -1,19 +1,19 @@
 return {
-  "Julian/lean.nvim",
-  event = { "BufReadPre *.lean", "BufNewFile *.lean" },
+  'Julian/lean.nvim',
+  event = { 'BufReadPre *.lean', 'BufNewFile *.lean' },
   dependencies = {
-    "neovim/nvim-lspconfig",
-    "nvim-lua/plenary.nvim",
-    "hrsh7th/nvim-cmp",
-    "nvim-telescope/telescope.nvim", -- for 2 Lean-specific pickers
-    "andymass/vim-matchup", -- for enhanced % motion behavior
-    "andrewradev/switch.vim", -- for switch support
-    "tomtom/tcomment_vim", -- for commenting
+    'neovim/nvim-lspconfig',
+    'nvim-lua/plenary.nvim',
+    'hrsh7th/nvim-cmp',
+    'nvim-telescope/telescope.nvim', -- for 2 Lean-specific pickers
+    'andymass/vim-matchup', -- for enhanced % motion behavior
+    'andrewradev/switch.vim', -- for switch support
+    'tomtom/tcomment_vim', -- for commenting
   },
   config = function()
     ---@module 'lean'
     ---@type lean.Config
-    require("lean").setup({
+    require('after.ftplugin.leaninfo').setup {
       -- Enable suggested mappings?
       --
       -- false by default, true to enable
@@ -62,11 +62,11 @@ return {
           -- Note that the backslash is implied, and that you of
           -- course may also use a snippet engine directly to do
           -- this if so desired.
-          wknight = "♘",
+          wknight = '♘',
         },
         -- Change if you don't like the backslash
         -- (comma is a popular choice on French keyboards)
-        leader = "\\",
+        leader = '\\',
       },
 
       -- Infoview support
@@ -86,7 +86,7 @@ return {
 
         -- Put the infoview on the top or bottom when horizontal?
         -- top | bottom
-        horizontal_position = "bottom",
+        horizontal_position = 'bottom',
 
         -- Always open the infoview window in a separate tabpage.
         -- Might be useful if you are using a screen reader and don't want too
@@ -96,7 +96,7 @@ return {
 
         -- Show indicators for pin locations when entering an infoview window?
         -- always | never | auto (= only when there are multiple pins)
-        indicators = "auto",
+        indicators = 'auto',
       },
 
       -- Progress bar support
@@ -107,7 +107,7 @@ return {
         -- be duplicated.
         enable = true, -- see above for default
         -- What character should be used for the bars?
-        character = "│",
+        character = '│',
         -- Use a different priority for the signs
         priority = 10,
       },
@@ -125,6 +125,6 @@ return {
         -- window.
         on_lines = nil,
       },
-    })
+    }
   end,
 }
