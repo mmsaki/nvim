@@ -28,7 +28,6 @@ set('n', '<D-s>', ':w<CR>', { desc = 'Save file', silent = true })
 -- buffer navigation
 set('n', '<leader><leader>h', ':bn<CR>', { desc = 'Move to next buffer' })
 set('n', '<leader><leader>l', ':bp<CR>', { desc = 'Move to previous buffer' })
-set('n', '<leader>d', ':bd<CR>', { desc = 'Delete buffer' })
 
 -- Move Lines
 set('n', '<D-k>', "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = 'Move Up' })

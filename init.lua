@@ -15,7 +15,7 @@ require('lazy').setup({
   'tpope/vim-sleuth',
   { import = 'custom.plugins' },
   { import = 'plugins' },
-	change_detection = { notify = false },
+  change_detection = { notify = false },
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
