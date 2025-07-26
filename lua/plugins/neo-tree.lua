@@ -382,7 +382,7 @@ return {
         },
       }
 
-      vim.keymap.set('n', '<leader>t', '<Cmd>Neotree toggle<CR>')
+      -- vim.keymap.set('n', '<leader>t', '<Cmd>Neotree toggle<CR>')
     end,
   },
 }

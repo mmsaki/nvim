@@ -38,7 +38,8 @@ set('v', '<D-j>', ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc 
 set('v', '<D-k>', ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = 'Move Up' })
 
 -- nvimtree
--- set("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
+set('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
+-- set('n', '<leader>t', '<Cmd>Neotree toggle<CR>')
 
 -- lspsaga
 set('n', '<leader>j', ':Lspsaga diagnostic_jump_next<cr>')
